@@ -1,1 +1,33 @@
-spring.application.name=wanted-pre-onboarding-backend
+server:
+ port: '80'
+
+spring:
+ datasource: 
+  driver-class-name: oracle.jdbc.driver.OracleDriver
+  url: jdbc:oracle:thin:@localhost:1521:xe
+  password: tiger
+  username: wanted
+ thymeleaf:
+  cache: false
+  prefix: classpath:/templates/
+  suffix: .html
+  enabled: true
+  check-template-location: true
+ jpa:
+  hibernate:
+   ddl-auto: none
+  generate-ddl: false
+  show-sql: true
+  database: oracle
+  database-platform: org.hibernate.dialect.OracleDialect
+ mvc:
+  static-path-pattern: /static/**
+ devtools:
+  livereload:
+   enabled: true
+logging:
+ level:
+  org:
+   hibernate: info
+mybatis:
+  mapper-locations: classpath:mappers/*.xml
