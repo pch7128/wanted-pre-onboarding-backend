@@ -5,6 +5,38 @@
 <title>Recruit-등록</title>
 </head>
 <body>
+	<main>
+		<section>
+			<div>
+				<form method="post" th:action="@{'/recruit/regist/'+${cm_num}}">
+					<div>
+						<label>[[${cm_id}]]</label>
+					</div>
+					<div>
+						<label>채용 포지션</label>
+						<input type="text" id="r_position" name="r_position">
+					</div>
+					<div>
+						<label>채용 보상금</label>
+						<input type="text" id="r_reward" name="r_reward">
+					</div>
+					<div>
+						<label>사용 기술</label>
+						<input type="text" id="r_stack" name="r_stack">
+					</div>
+					<div>
+						<label>내용</label>
+						<div>
+							<textarea rows="8" cols="40" id="r_content" name="r_content"></textarea>
+						</div>
+					</div>
+					<div>
+						<button type="submit">등록</button>
+					</div>
+				</form>
+			</div>
+		</section>
+	</main>
 
 </body>
 </html>
